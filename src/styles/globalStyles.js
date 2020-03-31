@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
-import * as V from "./variables"
+import * as V from './variables'
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -70,11 +70,11 @@ const GlobalStyles = createGlobalStyle`
   i, em {
     font-style: italic;
   }
-  input[type="search"] {
+  input[type='search'] {
     -webkit-appearance: textfield;
   }
-  input[type="search"]::-webkit-search-decoration,
-  input[type="search"]::-webkit-search-cancel-button {
+  input[type='search']::-webkit-search-decoration,
+  input[type='search']::-webkit-search-cancel-button {
     -webkit-appearance: none;
   }
   *::placeholder {
