@@ -1,5 +1,5 @@
 {
-    "name": "CopaFilmes",
+    "name": "copafilmes",
     "author": {
       "name": "Amanda Albuquerque",
       "email": "amandlei@hotmail.com"
@@ -15,8 +15,7 @@
       "react": "^16.9.0",
       "react-dom": "^16.9.0",
       "react-scripts": "3.1.2",
-      "styled-components": "^4.4.0",
-      "webfontloader": "1.6.28"
+      "styled-components": "^4.4.0"
     },
     "scripts": {
       "start": "react-scripts start",
