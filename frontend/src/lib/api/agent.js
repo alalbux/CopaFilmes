@@ -1,5 +1,5 @@
 import axios from 'axios' // eslint-disable-line import/no-extraneous-dependencies
-import config from '../../config'
+import config from '../../config/environments'
 
 const apiAgent = axios.create({
   baseURL: config.api.baseURL,
