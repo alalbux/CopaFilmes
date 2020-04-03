@@ -26,9 +26,7 @@
     "test": "jest --watch",
     "test:nowatch": "jest",
     "coverage": "jest --coverage --watch",
-    "lint": "eslint .",
-    "precommit": "yarn lint && yarn test:nowatch",
-    "prepush": "yarn lint && yarn test:nowatch"
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": "react-app"
