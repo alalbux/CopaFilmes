@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 // } from '../components'
 
 class Final extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       data: [],
@@ -13,8 +13,8 @@ class Final extends Component {
     }
   }
 
-  render () {
-    return <>Final</>
+  render() {
+    return <div>Final</div>
   }
 }
 

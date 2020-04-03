@@ -2,8 +2,8 @@ import axios from 'axios' // eslint-disable-line import/no-extraneous-dependenci
 import config from '../../config/environments'
 
 const apiAgent = axios.create({
-  baseURL: config.api.baseURL,
-  timeout: config.api.timeout
+  baseURL: 'https://filmschampions20200402090325.azurewebsites.net/',
+  timeout: 30000
 })
 
 export default apiAgent
