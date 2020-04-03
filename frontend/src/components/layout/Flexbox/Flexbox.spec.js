@@ -1,9 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import Flexbox from './Flexbox'
+import { shallow } from 'enzyme'
 
-describe('Flexbox > ', () => {
-  it('renders without crashing', () => {
-    shallow(<Flexbox />)
-  })
+test('it works', () => {
+  const wrapper = shallow(<Flexbox />)
+  expect(wrapper).toMatchSnapshot()
 })

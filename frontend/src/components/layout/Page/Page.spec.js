@@ -1,9 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import Page from './Page'
+import { shallow } from 'enzyme'
 
-describe('Page > ', () => {
-  it('renders without crashing', () => {
-    shallow(<Page />)
-  })
+test('it works', () => {
+  const wrapper = shallow(<Page />)
+  expect(wrapper).toMatchSnapshot()
 })

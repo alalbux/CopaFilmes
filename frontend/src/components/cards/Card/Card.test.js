@@ -1,17 +1,8 @@
 import React from 'react'
-import { mount } from 'enzyme'
 import Card from './Card'
+import { shallow } from 'enzyme'
 
-describe('<Card />', () => {
-  it('should render correctly', () => {
-    const component = mount(
-      <Card />
-    )
-
-    console.log(component)
-
-    expect(component).toMatchSnapshot()
-
-    component.unmount()
-  })
+test('it works', () => {
+  const wrapper = shallow(<Card />)
+  expect(wrapper).toMatchSnapshot()
 })

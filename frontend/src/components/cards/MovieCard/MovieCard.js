@@ -31,7 +31,7 @@ const ValueContainer = styled.div`
   margin-bottom: 16px;
 `
 
-const MovieCard = ({ movie }) => (
+const MovieCard = ({ movie }) => ( // eslint-disable-line no-unused-vars
   <MovieCardContainer>
     <Flexbox middle wrap>
       <ValueContainer>

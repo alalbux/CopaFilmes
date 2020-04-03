@@ -1,9 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import Text from './Text'
+import { shallow } from 'enzyme'
 
-describe('Text > ', () => {
-  it('renders without crashing', () => {
-    shallow(<Text />)
-  })
+test('it works', () => {
+  const wrapper = shallow(<Text />)
+  expect(wrapper).toMatchSnapshot()
 })
