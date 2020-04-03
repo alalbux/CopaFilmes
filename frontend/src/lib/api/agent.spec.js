@@ -11,7 +11,8 @@ describe('apiAgent', () => {
   })
 
   it('should have the `baseURL` on config', () => {
-    expect(apiAgent.defaults.baseURL).toEqual(config.api.baseURL)
+    expect(apiAgent.defaults.baseURL)
+      .toEqual('https://filmschampions20200402090325.azurewebsites.net/')
   })
 
   it('should have a default timeout', () => {
@@ -19,6 +20,6 @@ describe('apiAgent', () => {
   })
 
   it('should have the `timeout` on config', () => {
-    expect(apiAgent.defaults.timeout).toEqual(config.api.timeout)
+    expect(apiAgent.defaults.timeout).toEqual(30000)
   })
 })

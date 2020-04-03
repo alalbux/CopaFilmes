@@ -1,7 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 import apiAgent from './agent'
 
-export const isAPIError = ({ data = {} }) =>
+export const isError = ({ data = {} }) =>
   !!(data.error && (data.code || data.message))
 
 export const request = (method, endpoint, options = {}) =>
@@ -22,14 +22,14 @@ export const request = (method, endpoint, options = {}) =>
       .then((res) => {
         const { data = {} } = res
 
-        if (isAPIError(res)) return reject(data)
+        if (isError(res)) return reject(data)
 
         return resolve(data)
       })
       .catch((err) => {
         const { response = {} } = err
 
-        // eslint-disable-next-line prefer-promise-reject-errors
+        // eslint-disable-next-line
         return reject({ ...(response.data || {}), err })
       })
   })
