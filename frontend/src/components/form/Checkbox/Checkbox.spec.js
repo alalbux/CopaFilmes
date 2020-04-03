@@ -1,9 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import Checkbox from './Checkbox'
+import { shallow } from 'enzyme'
 
-describe('Checkbox > ', () => {
-  it('renders without crashing', () => {
-    shallow(<Checkbox />)
-  })
+test('it works', () => {
+  const wrapper = shallow(<Checkbox />)
+  expect(wrapper).toMatchSnapshot()
 })

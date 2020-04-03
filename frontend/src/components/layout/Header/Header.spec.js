@@ -1,9 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import Header from './Header'
+import { shallow } from 'enzyme'
 
-describe('Header > ', () => {
-  it('renders without crashing', () => {
-    shallow(<Header />)
-  })
+test('it works', () => {
+  const wrapper = shallow(<Header />)
+  expect(wrapper).toMatchSnapshot()
 })

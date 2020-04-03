@@ -1,9 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import Button from './Button'
+import { shallow } from 'enzyme'
 
-describe('Button > ', () => {
-  it('renders without crashing', () => {
-    shallow(<Button />)
-  })
+test('it works', () => {
+  const wrapper = shallow(<Button />)
+  expect(wrapper).toMatchSnapshot()
 })

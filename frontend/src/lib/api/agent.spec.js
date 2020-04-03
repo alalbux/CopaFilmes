@@ -1,5 +1,4 @@
 import apiAgent from './agent'
-import config from '../../config/environments'
 
 describe('apiAgent', () => {
   it('should import without errors', () => {
