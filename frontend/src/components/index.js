@@ -1,5 +1,9 @@
 // cards
 export { default as Card } from './cards/Card/Card'
+export { default as MovieCard } from './cards/MovieCard/MovieCard'
+
+// content
+export { default as Checkbox } from './form/Checkbox/Checkbox'
 
 // content
 export { default as Button } from './content/Button/Button'

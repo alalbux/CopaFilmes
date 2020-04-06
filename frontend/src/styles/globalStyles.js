@@ -78,14 +78,14 @@ const GlobalStyles = createGlobalStyle`
     -webkit-appearance: none;
   }
   *::placeholder {
-    color: var(--secondaryColor);
+    color: ${V.Color.secondary};
   }
   *::-webkit-input-placeholder {
-    color: var(--secondaryColor);
+    color: ${V.Color.secondary};
   }
   body {
-    background-color: var(--bg);
-    color: var(--primaryColor);
+    background-color: ${V.Color.gray};
+    color: ${V.Color.white};
     font-family: ${V.FontFamily.default}, sans-serif;
     font-size: 2rem;
     min-height: calc(100vh);

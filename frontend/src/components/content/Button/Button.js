@@ -1,11 +1,13 @@
 import { oneOf, node, bool, string } from 'prop-types'
 import styled, { css } from 'styled-components'
 
+import * as V from '../../../styles//variables'
+
 const Button = styled.button`
-  background-color: transparent;
+  background-color: ${V.Color.grayDark};
   border: none;
   padding: 8px 16px;
-  color: #D3D3D3;
+  color: ${V.Color.white};
   font-weight: bold;
   text-align: ${props => props.align};
   line-height: 1.15;
@@ -14,7 +16,8 @@ const Button = styled.button`
   box-shadow: none;
   outline: none;
   &:hover {
-    color: #FF1493;
+    color: ${V.Color.secondary};
+    background-color: ${V.Color.grayLight};
   }
   ${props => props.active && css`
     path {
