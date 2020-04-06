@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FilmsChampions.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace FilmsChampions.Controllers {
     [ApiController]

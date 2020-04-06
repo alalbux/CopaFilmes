@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FilmsChampions.Models;
 using FilmsChampions.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace CopaMovies.Controllers {
     [ApiController]
