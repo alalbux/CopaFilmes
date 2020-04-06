@@ -94,8 +94,7 @@ class Home extends Component {
   render () {
     const {
       movies = [],
-      isLoading = false,
-      checked = false
+      isLoading = false
     } = this.state
 
     return (
