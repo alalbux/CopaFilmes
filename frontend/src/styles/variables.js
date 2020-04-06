@@ -3,8 +3,9 @@ export const Color = {
   black: `rgba(15, 15, 15, .95)`,
   whiteSolid: `#ffffff`,
   blackSolid: `#000000`,
-  pink: `#0F1C2D`,
+  secondary: `#0047ab`,
   gray: `#A8A8A8`,
+  grayDark: `#858585`,
   grayLight: `#F7F9FA`,
   grayWhite: `#F2F2F2`
 }
@@ -14,7 +15,8 @@ export const Transition = {
 }
 
 export const FontFamily = {
-  default: `Poppins`
+  default: `Courier`,
+  secondary: `Verdana`
 }
 
 export const Border = {

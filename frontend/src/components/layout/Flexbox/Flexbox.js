@@ -6,39 +6,34 @@ import {
 import styled from 'styled-components'
 
 const Flexbox = styled.div`
-    display: flex;
-    ${props => props.horizontal && `
-      width: 100%;
-      flex-direction: row;
-    `}
-    ${props => props.vertical && `
-      width: 100%;
-      height: 100%;
-      flex-direction: column;
-    `}
-    ${props => props.middle && `
-      align-items: center;
-      justify-content: center;
-    `}
-    ${props => props.end && `
-      align-items: end;
-      justify-content: flex-end;
-    `}
-    ${props => props.justify && `
-      justify-content: ${props.justify};
-    `}
-    ${props => props.spacing && `
-      justify-content: space-${props.spacing}
-    `}
-    ${props => props.colSize && `
-      & > * {
-        width: ${props.colSize};
-      }
-    `}
-    ${props => props.wrap && `
-      flex-wrap: wrap;
-    `}
-  `
+  display: flex;
+  ${props => props.horizontal && `
+    width: 100%;
+    flex-direction: row;
+  `}
+  ${props => props.vertical && `
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  `}
+  ${props => props.middle && `
+    align-items: center;
+    justify-content: center;
+  `}
+  ${props => props.end && `
+    align-items: end;
+    justify-content: flex-end;
+  `}
+  ${props => props.justify && `
+    justify-content: ${props.justify};
+  `}
+  ${props => props.spacing && `
+    justify-content: space-${props.spacing}
+  `}
+  ${props => props.wrap && `
+    flex-wrap: wrap;
+  `}
+`
 
 Flexbox.propTypes = {
   horizontal: bool,

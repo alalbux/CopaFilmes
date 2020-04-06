@@ -1,18 +1,18 @@
-import React from 'react'
-import { shape, string } from 'prop-types'
+import React, { Component } from 'react'
+import { number, string, func, bool } from 'prop-types'
 import styled from 'styled-components'
 import {
-  Card
+  Card,
+  Checkbox
 } from '../../index'
 
 import Flexbox from '../../layout/Flexbox/Flexbox'
 
 const MovieCardContainer = styled(Card)`
-  text-align: center;
   width: 100%;
-  max-width: 390px;
+  max-width: 250px;
   margin: 0 auto;
-  min-height: 200px;
+  min-height: 100px;
   margin: 16px auto;
 `
 
@@ -24,27 +24,48 @@ const Label = styled.span`
 
 const ValueContainer = styled.div`
   width: 100%;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 16px;
 `
+class MovieCard extends Component {
+  render () {
+    const {
+      id,
+      titulo,
+      ano,
+      nota,
+      handlerChecked,
+      isChecked
+    } = this.props
 
-const MovieCard = ({ movie }) => ( // eslint-disable-line no-unused-vars
-  <MovieCardContainer>
-    <Flexbox middle wrap>
-      <ValueContainer>
-        <Label>Filme</Label>
-      </ValueContainer>
-    </Flexbox>
-  </MovieCardContainer>
-)
+    return (
+      <MovieCardContainer>
+        <Flexbox middle wrap>
+          <ValueContainer>
+            <Flexbox middle wrap>
+              <Checkbox 
+                checked={isChecked}
+                key={id}
+                onClick={handlerChecked}
+                type="checkbox"
+                value={titulo} 
+              />
+              <Label>{titulo} - {ano}</Label>
+            </Flexbox>
+            <Label>{nota}</Label>
+          </ValueContainer>
+        </Flexbox>
+      </MovieCardContainer>
+    )
+  }
+}
 
 MovieCard.propTypes = {
-  movie: shape({
-    Title: string
-  })
+  id: string,
+  titulo: string,
+  nota: number,
+  ano: number,
+  isChecked: bool,
+  handlerChecked: func
 }
 
 MovieCard.displayName = 'MovieCard'

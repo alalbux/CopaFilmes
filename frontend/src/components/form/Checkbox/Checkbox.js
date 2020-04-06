@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import * as V from '../../../styles//variables'
+
 const Checkbox = styled(({ children, className, ...inputProps }) => (
   <label className={className}>
     <input type='checkbox' {...inputProps} />
@@ -31,19 +33,19 @@ const Checkbox = styled(({ children, className, ...inputProps }) => (
   }
   &:hover input:not([disabled]) ~ .box,
   & input:not([disabled]):focus ~ .box {
-    border-color: #ee0099;
+    border-color: ${V.Color.gray};
   }
   & input:checked ~ .box {
-    background: #ff0099;
-    border-color: #ff0099;
+    background: ${V.Color.secondary};
+    border-color: ${V.Color.secondary};
   }
   & input:disabled:checked ~ .box {
     background: #d1cdd2;
   }
   &:hover input:not([disabled]):checked ~ .box,
   & input:checked:focus ~ .box {
-    background: #ff0099;
-    border-color: #ff0099;
+    background: ${V.Color.secondary};
+    border-color: ${V.Color.secondary};
   }
   & input:disabled ~ .box {
     border-color: #d1cdd2;
@@ -60,10 +62,10 @@ const Checkbox = styled(({ children, className, ...inputProps }) => (
     content: '';
     position: absolute;
     display: none;
-    left: 7px;
-    top: 4px;
-    width: 3px;
-    height: 6px;
+    left: 5px;
+    top: 0px;
+    width: 4px;
+    height: 10px;
     border: solid #fff;
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
