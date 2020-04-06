@@ -22,8 +22,6 @@ export const request = (method, endpoint, options = {}) =>
       .then((res) => {
         const { data = {} } = res
 
-        console.log(res)
-
         if (isError(res)) return reject(data)
 
         return resolve(data)
