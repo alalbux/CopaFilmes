@@ -47,11 +47,15 @@ const MoviesList = ({
 }
 
 MoviesList.defaultProps = {
-  movies: []
+  movies: [],
+  competitors: []
 }
 
 MoviesList.propTypes = {
   movies: arrayOf(
+    shape({})
+  ),
+  competitors: arrayOf(
     shape({})
   ),
   onHandleCheckboxChange: func,
