@@ -62,8 +62,9 @@ class MovieCard extends Component {
                 onClick={handlerChecked}
                 type="checkbox"
                 value={titulo} 
-              />
-              <Title>{titulo}</Title>
+              >
+                <Title>{titulo}</Title>
+              </Checkbox>
             </CheckboxContainer>
             <DetailsContainer vertical end>
               <Label>Ano: {ano}</Label>

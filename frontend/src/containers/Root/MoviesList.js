@@ -12,6 +12,7 @@ import {
 
 const MoviesList = ({
   movies,
+  competitors,
   onHandleCheckboxChange,
   onHandleChampionship
 }) => {
@@ -25,10 +26,18 @@ const MoviesList = ({
     )
   })
 
+  const isDisabled = () => {
+    if (competitors.lenght >= 9) {
+      return true
+    }
+
+    return false 
+  }
+
   return (
     <div>
       <Flexbox end>
-        <Button onClick={onHandleChampionship}>Gerar Meu Campeonato</Button>
+        <Button disabled={isDisabled()} onClick={onHandleChampionship}>Gerar Meu Campeonato</Button>
       </Flexbox>
       <Flexbox wrap>
         {moviesComponent}

@@ -84,6 +84,7 @@ class Root extends Component {
     const {
       movies = [],
       winners = [],
+      competitors = [],
       finalResult = false
     } = this.state
 
@@ -100,8 +101,9 @@ class Root extends Component {
               <DefaultHeader />
               <MoviesList
                 onHandleChampionship={this.fetchChampionship}
-                onHandleCheckboxChange={this.handleCheckboxChange} 
+                onHandleCheckboxChange={this.handleCheckboxChange}
                 movies={movies}
+                competitors={competitors}
               />
             </Fragment>
           )}

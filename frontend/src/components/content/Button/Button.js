@@ -24,6 +24,11 @@ const Button = styled.button`
       fill: #ee0099!important;
     }
   `}
+  ${props => props.disabled && css`
+    cursor: not-allowed;
+    background-color: ${V.Color.grayLight};
+    color: ${V.Color.grayDark};
+  `}
 `
 
 Button.propTypes = {
