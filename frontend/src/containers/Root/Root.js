@@ -12,6 +12,8 @@ import WinnersList from './WinnersList'
 import { getMoviesResource } from '../../lib/api/resources/movies'
 import { sendChampionshipResource } from '../../lib/api/resources/championship'
 
+import getUnique from '../../lib/helpers'
+
 class Root extends Component {
   constructor (props) {
     super(props)
@@ -52,13 +54,28 @@ class Root extends Component {
   }
 
   async fetchChampionship() {
-    const data = await sendChampionshipResource(this.state.competitors)
+    const {
+      competitors
+    } = this.state
 
-    this.setState({ isLoading: true })
-
-    const winners = data
-    
-    this.setWinners(winners)
+    if(getUnique(competitors,'id')) {
+      if (competitors.length === 8) {
+        const data = await sendChampionshipResource(this.state.competitors)
+  
+        this.setState({ isLoading: true })
+  
+        const winners = data
+        
+        this.setWinners(winners)
+      } else if (competitors.length > 8) {
+        alert('Escolha 8 filmes para competir')
+        window.location.reload(false)
+      } 
+      else {
+        alert('Escolha 8 filmes para competir')
+      }
+    }
+   
   }
 
   async fetchMovies() {
@@ -72,11 +89,12 @@ class Root extends Component {
   }
 
   handleCheckboxChange(movie) {
-    const isChecked = !this.state.checked
+    const {
+      competitors
+    } = this.state
 
     this.setState({
-      checked: isChecked,
-      competitors: [...this.state.competitors, movie]
+      competitors: [...competitors, movie]
     })
   }
 

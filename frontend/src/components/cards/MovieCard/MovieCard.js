@@ -66,7 +66,7 @@ class MovieCard extends Component {
                 <Title>{titulo}</Title>
               </Checkbox>
             </CheckboxContainer>
-            <DetailsContainer vertical end>
+            <DetailsContainer vertical>
               <Label>Ano: {ano}</Label>
               <Label>Nota: {nota}</Label>
             </DetailsContainer>
