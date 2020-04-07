@@ -12,7 +12,7 @@ const Card = styled.div`
   margin: 8px 0;
   padding: 16px;
   width: 100%;
-  min-height: 150px;
+  min-height: 80px;
   height: auto;
   ${props => props.height && `height: ${props.height};`}
   ${props => props.onClick && `cursor: pointer;`}

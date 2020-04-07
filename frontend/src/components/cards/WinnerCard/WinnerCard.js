@@ -9,22 +9,22 @@ import Flexbox from '../../layout/Flexbox/Flexbox'
 
 const WinnerCardContainer = styled(Card)`
   width: 100%;
-  max-width: 250px;
   margin: 0 auto;
   min-height: 100px;
   margin: 16px auto;
 `
 
-const Label = styled.span`
+const Title = styled.strong`
   display: block;
   font-weight: bold;
   font-size: 14px;
 `
 
-const ValueContainer = styled.div`
-  width: 100%;
-  margin-bottom: 16px;
+const Label = styled.span`
+  display: block;
+  font-size: 14px;
 `
+
 class WinnerCard extends Component {
   render () {
     const {
@@ -35,13 +35,10 @@ class WinnerCard extends Component {
 
     return (
       <WinnerCardContainer>
-        <Flexbox middle wrap>
-          <ValueContainer>
-            <Flexbox middle wrap>
-              <Label>{titulo} - {ano}</Label>
-            </Flexbox>
-            <Label>{nota}</Label>
-          </ValueContainer>
+        <Flexbox vertical middle justify="space-around">
+            <Title>{titulo} - {ano}</Title>
+
+            <Label>Nota: {nota}</Label>
         </Flexbox>
       </WinnerCardContainer>
     )

@@ -8,15 +8,13 @@ import {
   Flexbox
 } from '../../components'
 
-const WinnersList = (props) => {
-  const {
-    winners
-  } = props
-
+const WinnersList = ({ winners }) => {
   const winnersComponent = winners.map((winner) => {
+    console.log(winners)
     return (
       <WinnerCard
         key={winner.id}
+        // winnerPosition={winners[winner]}
         {...winner}
       />
     )

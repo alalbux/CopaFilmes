@@ -10,22 +10,36 @@ import Flexbox from '../../layout/Flexbox/Flexbox'
 
 const MovieCardContainer = styled(Card)`
   width: 100%;
-  max-width: 250px;
-  margin: 0 auto;
+  max-width: 230px;
   min-height: 100px;
   margin: 16px auto;
 `
 
 const Label = styled.span`
   display: block;
+  font-size: 14px;
+`
+
+const Title = styled.strong`
+  display: block;
   font-weight: bold;
   font-size: 14px;
 `
 
-const ValueContainer = styled.div`
+const ValueContainer = styled(Flexbox)`
   width: 100%;
-  margin-bottom: 16px;
 `
+
+const DetailsContainer = styled(Flexbox)`
+  width: 100%;
+`
+
+const CheckboxContainer = styled(Flexbox)`    
+  width: 100%;
+  margin: 0 10px 20px 0;
+  height: 30px;
+`
+
 class MovieCard extends Component {
   render () {
     const {
@@ -39,19 +53,22 @@ class MovieCard extends Component {
 
     return (
       <MovieCardContainer>
-        <Flexbox middle wrap>
-          <ValueContainer>
-            <Flexbox middle wrap>
-              <Checkbox 
+        <Flexbox >
+          <ValueContainer vertical justify="space-between">
+            <CheckboxContainer justify="flex-start">
+              <Checkbox
                 checked={isChecked}
                 key={id}
                 onClick={handlerChecked}
                 type="checkbox"
                 value={titulo} 
               />
-              <Label>{titulo} - {ano}</Label>
-            </Flexbox>
-            <Label>{nota}</Label>
+              <Title>{titulo}</Title>
+            </CheckboxContainer>
+            <DetailsContainer vertical end>
+              <Label>Ano: {ano}</Label>
+              <Label>Nota: {nota}</Label>
+            </DetailsContainer>
           </ValueContainer>
         </Flexbox>
       </MovieCardContainer>

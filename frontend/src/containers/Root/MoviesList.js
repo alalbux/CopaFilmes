@@ -10,13 +10,11 @@ import {
   Button
 } from '../../components'
 
-const MoviesList = (props) => {
-  const {
-    movies,
-    onHandleCheckboxChange,
-    onHandleChampionship
-  } = props
-
+const MoviesList = ({
+  movies,
+  onHandleCheckboxChange,
+  onHandleChampionship
+}) => {
   const moviesComponent = movies.map((movie) => {
     return (
         <MovieCard
