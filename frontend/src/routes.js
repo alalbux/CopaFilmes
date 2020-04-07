@@ -5,7 +5,7 @@ import GlobalStyles from './styles/GlobalStyles'
 
 const Routes = () => (
   <div>
-	  <GlobalStyles />
+    <GlobalStyles />
     <Switch>
       <Route exact path='/' component={Root} />
     </Switch>
