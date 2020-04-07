@@ -1,18 +1,14 @@
 ## Copa dos Filmes
 
+## Frontend
 
-## Browsers support
+#### Browsers support
 
 | ![](https://www.w3schools.com/images/compatible_chrome.gif)<br>Chrome | ![](https://www.w3schools.com/images/compatible_firefox.gif)<br>Firefox | ![](https://www.w3schools.com/images/compatible_edge.gif)<br>Edge |
 | :-------------------------------------------------------------------: | :---------------------------------------------------------------------: | :---------------------------------------------------------------: |
 |                                  57+                                  |                                   52+                                   |                                16+                                |
 
-## Stack
-- [React](https://github.com/facebook/react)
-- [Create React App](https://github.com/facebook/create-react-app)
-- [Styled-components](https://www.styled-components.com/)
-
-## Run the project locally
+#### Run the project locally
 
 **1 -** Clone the project and install the dependencies:
 
@@ -29,18 +25,25 @@ $ npm install
 $ npm run start
 ```
 
-## Automatic Tasks
+#### Automatic Tasks
 
 - `$ npm run start` Watch the files to build and start a static server.
 - `$ npm run test` Watch the files to testing.
 - `$ npm run build` Compile, concat and minify all files.
 
 
-## License
+#### Stack
+- [React](https://github.com/facebook/react)
+- [Create React App](https://github.com/facebook/create-react-app)
+- [Styled-components](https://www.styled-components.com/)
+
+
+#### License
 
 [CopaFilmes]() is [MIT](LICENSE) licensed.
 
-### API
+
+## API
 
 Deployed endpoint: [https://filmschampions20200402090325.azurewebsites.net/](https://filmschampions20200402090325.azurewebsites.net/)
 
