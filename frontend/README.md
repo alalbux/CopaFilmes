@@ -28,7 +28,7 @@ $ yarn install
 ```
 
 **2 -** Run static server and livereload:
-[http://localhost:3000](http://localhost:3000)
+[http://localhost:8080](http://localhost:8080)
 
 ```
 $ yarn start
