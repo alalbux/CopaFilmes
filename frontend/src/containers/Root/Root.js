@@ -1,26 +1,18 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, { Component, Fragment } from 'react'
 import {
-  Header,
   Flexbox,
-  Page,
-  Title,
-  Button,
-  MovieCard
+  Page
 } from '../../components'
+
+import DefaultHeader from './DefaultHeader'
+import FinalHeader from './FinalHeader'
+import MoviesList from './MoviesList'
+import WinnersList from './WinnersList'
 
 import { getMoviesResource } from '../../lib/api/resources/movies'
 import { sendChampionshipResource } from '../../lib/api/resources/championship'
 
-const Subtitle = styled(Title.H2)`
-  margin-top: 16px;
-`
-
-const Details = styled(Title.H3)`
-  margin-top: 16px;
-`
-
-class Home extends Component {
+class Root extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -28,9 +20,9 @@ class Home extends Component {
       winners:[],
       competitors: [],
       isLoading: false,
-      checked: false
+      checked: false,
+      finalResult: false
     }
-
 
     this.setMovies = this.setMovies.bind(this)
     this.fetchMovies = this.fetchMovies.bind(this)
@@ -40,6 +32,9 @@ class Home extends Component {
 
   componentDidMount() {
     this.fetchMovies()
+    this.setState({
+      isLoading: false
+    })
   }
 
   setMovies(movies) {
@@ -52,7 +47,7 @@ class Home extends Component {
   setWinners(winners) {
     this.setState({
       winners,
-      isLoading: false
+      finalResult: true
     })
   }
 
@@ -85,45 +80,35 @@ class Home extends Component {
     })
   }
 
-  handlerCompetitorsList() {
-    const competitorsList = this.state.competitors
-
-    this.setState({competitors: competitorsList}) 
-  }
-
   render () {
     const {
       movies = [],
-      isLoading = false
+      winners = [],
+      finalResult = false
     } = this.state
 
     return (
       <Page>
         <Flexbox vertical>
-          <Header>
-            <Subtitle>Campeonato de Filmes</Subtitle>
-            <Title.H1>Fase de seleção </Title.H1>
-            <Details>Selecione 8 filmes que voce deseja que entrem na competiçao e depois pressione o botao Gerar Meu Campeonato para prosseguir</Details>
-          </Header>
-
-          {!isLoading ? (
-            <Flexbox wrap>
-              {movies.map(movie => {
-                return (
-                  <MovieCard
-                    key={movie.id}
-                    handlerChecked={() => this.handleCheckboxChange(movie)}
-                    {...movie}
-                  />
-                )
-              })}
-            </Flexbox>
-          ) : null}
-          <Button onClick={this.fetchChampionship}>Gerar Meu Campeonato</Button>
+          {finalResult ? (
+            <Fragment>
+              <FinalHeader /> 
+              <WinnersList winners={winners}/>
+            </Fragment>
+          ) : (
+            <Fragment>
+              <DefaultHeader />
+              <MoviesList
+                onHandleChampionship={this.fetchChampionship}
+                onHandleCheckboxChange={this.handleCheckboxChange} 
+                movies={movies}
+              />
+            </Fragment>
+          )}
         </Flexbox>
       </Page>
     )
   }
 }
 
-export default Home
+export default Root

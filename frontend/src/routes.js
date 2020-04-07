@@ -1,15 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Home from './containers/Home/Home'
-import Final from './containers/Final/Final'
+import { Root } from './containers'
 import GlobalStyles from './styles/GlobalStyles'
 
 const Routes = () => (
   <div>
-    <GlobalStyles />
+	  <GlobalStyles />
     <Switch>
-      <Route exact path='/' component={Home} />
-      <Route path='/final' component={Final} />
+      <Route exact path='/' component={Root} />
     </Switch>
   </div>
 )

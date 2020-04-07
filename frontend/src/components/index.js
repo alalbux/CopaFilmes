@@ -1,6 +1,7 @@
 // cards
 export { default as Card } from './cards/Card/Card'
 export { default as MovieCard } from './cards/MovieCard/MovieCard'
+export { default as WinnerCard } from './cards/WinnerCard/WinnerCard'
 
 // content
 export { default as Checkbox } from './form/Checkbox/Checkbox'

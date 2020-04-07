@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Home from './Home'
+import Root from './Root'
 
 test('it works', () => {
-  const wrapper = shallow(<Home />)
+  const wrapper = shallow(<Root />)
   expect(wrapper).toMatchSnapshot()
 })
