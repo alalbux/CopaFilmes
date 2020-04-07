@@ -2,6 +2,8 @@
 
 [https://alalbux.github.io/CopaFilmes/](https://alalbux.github.io/CopaFilmes/)
 
+![homepage](https://github.com/alalbux/CopaFilmes/blob/master/homepage.png)
+
 ## Frontend
 
 #### Browsers support
