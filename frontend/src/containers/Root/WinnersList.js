@@ -10,11 +10,9 @@ import {
 
 const WinnersList = ({ winners }) => {
   const winnersComponent = winners.map((winner) => {
-    console.log(winners)
     return (
       <WinnerCard
         key={winner.id}
-        // winnerPosition={winners[winner]}
         {...winner}
       />
     )

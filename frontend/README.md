@@ -23,22 +23,22 @@
 
 ```
 $ git clone https://github.com/alalbux/CopaFilmes.git
-$ cd CopaFilmes/
-$ yarn install
+$ cd CopaFilmes/frontend/
+$ npm install
 ```
 
 **2 -** Run static server and livereload:
 [http://localhost:8080](http://localhost:8080)
 
 ```
-$ yarn start
+$ npm run start
 ```
 
 ## Automatic Tasks
 
-- `$ yarn start` Watch the files to build and start a static server.
-- `$ yarn test` Watch the files to testing.
-- `$ yarn build` Compile, concat and minify all files.
+- `$ npm run start` Watch the files to build and start a static server.
+- `$ npm run test` Watch the files to testing.
+- `$ npm run build` Compile, concat and minify all files.
 
 
 ## License

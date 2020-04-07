@@ -4,6 +4,7 @@
     "name": "Amanda Albuquerque",
     "email": "amandlei@hotmail.com"
   },
+  "homepage": "https://alalbux.github.io/CopaFilmes/",
   "license": "MIT",
   "version": "0.1.0",
   "main": "index.js",
@@ -17,7 +18,6 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hot-loader": "3.1.3",
-    "react-router-dom": "4.2.2",
     "styled-components": "^4.0.0"
   },
   "scripts": {
@@ -27,7 +27,9 @@
     "test": "jest",
     "test:nowatch": "jest  --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -56,6 +58,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "2.30.1",
     "husky": "0.14.3",
     "identity-obj-proxy": "^3.0.0",

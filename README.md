@@ -30,6 +30,7 @@ $ npm run start
 - `$ npm run start` Watch the files to build and start a static server.
 - `$ npm run test` Watch the files to testing.
 - `$ npm run build` Compile, concat and minify all files.
+- `$ npm run deploy` Compile, concat, minify deploy all files.
 
 
 #### Stack
