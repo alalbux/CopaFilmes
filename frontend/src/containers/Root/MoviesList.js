@@ -19,9 +19,9 @@ const MoviesList = ({
   const moviesComponent = movies.map((movie) => {
     return (
         <MovieCard
-            key={movie.id}
-            handlerChecked={() => onHandleCheckboxChange(movie)}
-            {...movie}
+          key={movie.id}
+          handlerChecked={() => onHandleCheckboxChange(movie)}
+          {...movie}
         />
     )
   })
@@ -36,7 +36,7 @@ const MoviesList = ({
 
   return (
     <div>
-      <Flexbox end>
+      <Flexbox middle>
         <Button disabled={isDisabled()} onClick={onHandleChampionship}>Gerar Meu Campeonato</Button>
       </Flexbox>
       <Flexbox wrap>

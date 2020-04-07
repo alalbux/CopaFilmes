@@ -9,7 +9,7 @@ const HeaderContainer = styled.div`
   color: #ffffff;
   font-weight: 600;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
   min-height: 30vh;
   padding: 36px;
 `

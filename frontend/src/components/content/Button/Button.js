@@ -7,8 +7,10 @@ const Button = styled.button`
   background-color: ${V.Color.grayDark};
   border: none;
   padding: 8px 16px;
+  margin: 10px 0 0;
   color: ${V.Color.white};
   font-weight: bold;
+  font-size: 16px;
   text-align: ${props => props.align};
   line-height: 1.15;
   letter-spacing: 0.5px;
